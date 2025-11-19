@@ -1,0 +1,95 @@
+ABAC setup for team-based resource isolation in AWS.
+
+------Goal---------
+
+Users should access only the S3 buckets that belong to their team.
+
+Example Teams:
+    developer
+    qa
+    finance
+    hr
+
+***************Step ABAC Setup (Simplest Version)********************
+STEP 1: Tag the IAM Users (Principal Tags)
+
+When creating or editing each IAM user:
+
+Example:
+    IAM User → ramesh
+    team = developer
+    IAM User → raj
+    team = qa
+
+
+This tag will be used to check what team the user belongs to.
+
+
+STEP 2: Tag the S3 Buckets (Resource Tags)
+
+While creating each bucket, add:
+
+Example:
+    Bucket → dev-app-data
+    team = developer
+    Bucket → qa-test-data
+    team = qa
+
+STEP 3: Attach ABAC Policy to Users/Group/Role
+
+This policy allows S3 access only when user.team == bucket.team.
+
+🔥 Minimal ABAC Policy
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:*",
+      "Resource": ["arn:aws:s3:::*", "arn:aws:s3:::*/*"],
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/team": "${aws:PrincipalTag/team}"
+        }
+      }
+    }
+  ]
+}
+
+*********************************************************************************************************************************
+
+Here you can find the simple flow diagram for this 
+
+                    ┌──────────────────────────┐
+                    │        IAM User          │
+                    │  Tag: team = developer   │
+                    └─────────────┬────────────┘
+                                  │
+                                  │ (User makes request)
+                                  ▼
+                    ┌──────────────────────────┐
+                    │       IAM Policy         │
+                    │  Condition:              │
+                    │  aws:PrincipalTag/team   │
+                    │       ==                 │
+                    │  aws:ResourceTag/team    │
+                    └─────────────┬────────────┘
+                                  │
+                          (Policy Evaluation)
+                                  │
+             ┌────────────────────┼─────────────────────┐
+             │                                            │
+             ▼                                            ▼
+ ┌──────────────────────────┐              ┌──────────────────────────┐
+ │   Resource (S3 Bucket)   │              │   Resource (S3 Bucket)   │
+ │ Tag: team = developer    │              │ Tag: team = finance      │
+ └─────────────┬────────────┘              └─────────────┬────────────┘
+               │                                           │
+               │ (Compare Tags)                            │
+               │                                           │
+     Tags Match? YES ✔                                    NO ✘
+               │                                           │
+               ▼                                           ▼
+  ┌──────────────────────────────┐          ┌──────────────────────────────┐
+  │   Access GRANTED (Allowed)   │          │   Access DENIED (Implicit)   │
+  └──────────────────────────────┘          └──────────────────────────────┘
