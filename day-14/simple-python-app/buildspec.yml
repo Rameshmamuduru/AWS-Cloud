@@ -13,19 +13,22 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - pip install -r day-13/simple-python-app/requirements.txt
+
+      - echo "Logging into DockerHub"
+      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin docker.io
+      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_NAME=$DOCKER_REGISTRY_USERNAME/simple-python-flask-app
+      
   build:
     commands:
-      - echo "Running tests..."
-      - cd day-13/simple-python-app/
-      - echo "Building Docker image..."
-      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
-      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest"
+      - echo "Building Docker image"
+      - docker build -t $IMAGE_NAME:$IMAGE_TAG .
+      
   post_build:
     commands:
+      - echo "Pushing Docker image"
+      - docker push $IMAGE_NAME:$IMAGE_TAG
       - echo "Build completed successfully!"
-artifacts:
-  files:
-    - '**/*'
-  base-directory: ../simple-python-app
+
+
 
