@@ -870,3 +870,98 @@ Aggregates security findings from multiple AWS services.
 - Security posture management
 - Viewing alerts from GuardDuty, Inspector, etc.
 
+---
+---
+---
+
+# VI. AWS Containers Services
+
+## 1. Amazon ECS (Elastic Container Service)
+
+### What it is
+
+AWS native container orchestration service to run and manage Docker containers.
+
+### Key idea
+
+AWS manages container orchestration for you (simpler than Kubernetes).
+
+### How it works
+
+You define tasks (container configs) and services (how many to run).
+
+### Use cases
+
+- Microservices architecture
+- Running containerized applications
+- Backend services
+- Applications needing simple container orchestration
+
+---
+
+## 2. Amazon EKS (Elastic Kubernetes Service)
+
+### What it is
+
+Managed Kubernetes service.
+
+### Key idea
+
+Run Kubernetes without managing control plane.
+
+### How it works
+
+AWS manages Kubernetes master nodes, you manage worker nodes or use Fargate.
+
+### Use cases
+
+- Kubernetes-based applications
+- Large-scale microservices
+- Multi-cloud or hybrid environments
+- Teams already using Kubernetes
+
+---
+
+## 3. Amazon ECR (Elastic Container Registry)
+
+### What it is
+
+Docker image storage service.
+
+### Key idea
+
+Private registry to store and manage container images.
+
+### Use cases
+
+- Store Docker images securely
+- CI/CD pipelines pushing images
+- Version control of container images
+- Integration with ECS and EKS
+
+---
+
+## 4. AWS Fargate
+
+### What it is
+
+Serverless compute engine for containers.
+
+### Key idea
+
+Run containers without managing servers.
+
+### How it works
+
+Used with ECS or EKS to run containers.
+
+### Use cases
+
+- Microservices without managing EC2
+- Event-driven container workloads
+- Applications needing automatic scaling
+- Simplifying container infrastructure
+
+
+
+
