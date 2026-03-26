@@ -189,7 +189,7 @@ You only provide container image and configuration.
 ---
 ---
 
-# 2. AWS Storage Services
+# II. AWS Storage Services
 
 ## 1. Amazon S3 (Simple Storage Service)
 
