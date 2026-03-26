@@ -185,3 +185,143 @@ You only provide container image and configuration.
 - Applications running in ECS or EKS
 - Systems where you want no server management
 
+##################################################################################################################
+
+# AWS Storage Services
+
+## 1. Amazon S3 (Simple Storage Service)
+
+### What it is
+
+Object storage service used to store files like images, videos, backups, logs, and documents. Data is stored as objects in buckets.
+
+### Key idea
+
+Highly scalable, durable storage accessible over the internet.
+
+### Use cases
+
+- Storing website images and videos
+- Data lakes for analytics
+- Application backups
+- Log storage
+- Static website hosting
+
+---
+
+## 2. Amazon S3 Glacier
+
+### What it is
+
+Low-cost storage designed for long-term archival of data that is rarely accessed.
+
+### Key idea
+
+Very cheap storage but slow retrieval.
+
+### Use cases
+
+- Long-term backups
+- Legal and compliance archives
+- Historical data storage
+- Disaster recovery copies
+
+---
+
+## 3. Amazon EBS (Elastic Block Store)
+
+### What it is
+
+Block storage used with EC2 instances. It acts like a virtual hard disk attached to a server.
+
+### Key idea
+
+Fast, persistent storage for single EC2 instance.
+
+### Use cases
+
+- EC2 root volumes (OS disk)
+- Databases running on EC2
+- Application storage needing low latency
+
+---
+
+## 4. Amazon EFS (Elastic File System)
+
+### What it is
+
+Shared file storage system that multiple EC2 instances can access at the same time.
+
+### Key idea
+
+A network file system (like shared drive).
+
+### Use cases
+
+- Shared application files across servers
+- Web applications with multiple EC2 instances
+- Container workloads needing shared storage
+
+---
+
+## 5. Amazon FSx
+
+### What it is
+
+Fully managed high-performance file systems designed for specific workloads.
+
+Types include Windows File Server, Lustre, and NetApp ONTAP.
+
+### Key idea
+
+Specialized enterprise-grade file storage.
+
+### Use cases
+
+- Windows-based applications needing file sharing
+- High-performance computing workloads
+- Enterprise storage systems
+
+---
+
+## 6. AWS Storage Gateway
+
+### What it is
+
+A hybrid storage service that connects on-premises systems with AWS cloud storage.
+
+### Key idea
+
+Bridge between local data center and AWS storage.
+
+### Use cases
+
+- Backing up on-premises data to AWS S3
+- Migrating data to cloud gradually
+- Hybrid cloud storage setups
+- Archiving on-prem data to Glacier
+
+---
+
+## 7. AWS Backup
+
+### What it is
+
+Centralized backup service to automate and manage backups across multiple AWS services.
+
+### Key idea
+
+One place to manage all backups.
+
+### Supports
+
+EBS, EFS, RDS, DynamoDB, FSx
+
+### Use cases
+
+- Automated backup scheduling
+- Disaster recovery planning
+- Compliance and audit requirements
+- Centralized backup management across AWS
+
+
