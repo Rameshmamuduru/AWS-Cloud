@@ -1,10 +1,4 @@
-Got it — here is a **clear + simple + use-case focused explanation** of AWS compute services.
-
----
-
 # AWS Compute Services (Clear Explanation + Use Cases)
-
----
 
 ## 1. EC2 (Elastic Compute Cloud)
 
