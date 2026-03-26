@@ -16,6 +16,8 @@ AWS has **200+ cloud services**. Listing every single one would be extremely lon
 * Outposts
 * Local Zones
 * Wavelength
+* fargate
+  
 
 ---
 
