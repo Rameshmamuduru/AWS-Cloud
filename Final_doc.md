@@ -185,7 +185,9 @@ You only provide container image and configuration.
 - Applications running in ECS or EKS
 - Systems where you want no server management
 
-##################################################################################################################
+---
+---
+---
 
 # AWS Storage Services
 
