@@ -326,4 +326,196 @@ EBS, EFS, RDS, DynamoDB, FSx
 - Compliance and audit requirements
 - Centralized backup management across AWS
 
+---
+---
+---
+
+# III. AWS Database Services
+
+---
+
+## 1. Amazon RDS (Relational Database Service)
+
+### What it is
+
+Managed relational database service that supports SQL databases like MySQL, PostgreSQL, Oracle, SQL Server, MariaDB.
+
+### Key idea
+
+Traditional database but AWS manages backups, patching, and maintenance.
+
+### Use cases
+
+- Web applications
+- Enterprise applications
+- E-commerce systems
+- Transactional systems (OLTP)
+
+---
+
+## 2. Amazon Aurora
+
+### What it is
+
+High-performance relational database compatible with MySQL and PostgreSQL.
+
+### Key idea
+
+Faster and more scalable version of RDS.
+
+### Use cases
+
+- High-performance web applications
+- SaaS applications
+- Mission-critical systems requiring high availability
+
+---
+
+## 3. Amazon DynamoDB
+
+### What it is
+
+Fully managed NoSQL database (key-value and document).
+
+### Key idea
+
+Serverless, extremely fast, and auto-scaling database.
+
+### Use cases
+
+- Real-time applications
+- Gaming leaderboards
+- IoT applications
+- Serverless backend systems
+
+---
+
+## 4. Amazon Redshift
+
+### What it is
+
+Data warehouse service for analytics (OLAP).
+
+### Key idea
+
+Used for large-scale data analysis and reporting.
+
+### Use cases
+
+- Business intelligence dashboards
+- Data analytics
+- Big data reporting
+- Historical data analysis
+
+---
+
+## 5. Amazon ElastiCache
+
+### What it is
+
+In-memory caching service using Redis or Memcached.
+
+### Key idea
+
+Speeds up applications by storing frequently used data in memory.
+
+### Use cases
+
+- Caching database queries
+- Session storage
+- Real-time leaderboard systems
+- Reducing database load
+
+---
+
+## 6. Amazon Neptune
+
+### What it is
+
+Graph database service.
+
+### Key idea
+
+Used for data that is connected (relationships).
+
+### Use cases
+
+- Social networks
+- Fraud detection systems
+- Recommendation engines
+- Knowledge graphs
+
+---
+
+## 7. Amazon DocumentDB
+
+### What it is
+
+Managed document database compatible with MongoDB.
+
+### Key idea
+
+Stores data in JSON-like documents.
+
+### Use cases
+
+- Content management systems
+- Catalog systems
+- MongoDB-based applications
+
+---
+
+## 8. Amazon Keyspaces
+
+### What it is
+
+Managed Apache Cassandra-compatible database.
+
+### Key idea
+
+Wide-column NoSQL database for high-scale workloads.
+
+### Use cases
+
+- High-write applications
+- IoT data ingestion
+- Time-series like workloads (Cassandra style)
+
+---
+
+## 9. Amazon Timestream
+
+### What it is
+
+Time-series database optimized for time-stamped data.
+
+### Key idea
+
+Designed for data that changes over time.
+
+### Use cases
+
+- IoT sensor data
+- Application monitoring
+- DevOps metrics
+- Log analytics over time
+
+---
+
+## 10. Amazon QLDB (Quantum Ledger Database)
+
+### What it is
+
+Immutable ledger database with cryptographic verification.
+
+### Key idea
+
+Data cannot be altered or deleted, only appended.
+
+### Use cases
+
+- Banking transactions
+- Audit logs
+- Financial systems
+- Compliance tracking
 
