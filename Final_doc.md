@@ -519,3 +519,161 @@ Data cannot be altered or deleted, only appended.
 - Financial systems
 - Compliance tracking
 
+---
+---
+---
+
+
+# IV. AWS Networking & CDN Services
+
+## 1. Amazon VPC (Virtual Private Cloud)
+
+### What it is
+
+A logically isolated network inside AWS where you can launch resources like EC2, databases, etc.
+
+### Key idea
+
+You control your own private network in the cloud.
+
+### Use cases
+
+- Hosting secure applications
+- Creating private subnets for databases
+- Isolating production and development environments
+- Building secure cloud architectures
+
+---
+
+## 2. Amazon Route 53
+
+### What it is
+
+Highly available DNS (Domain Name System) service.
+
+### Key idea
+
+Converts domain names into IP addresses and routes traffic.
+
+### Use cases
+
+- Domain registration
+- Routing users to applications
+- Failover routing for high availability
+- Load balancing traffic across regions
+
+---
+
+## 3. Amazon CloudFront
+
+### What it is
+
+Content Delivery Network (CDN) that caches content closer to users globally.
+
+### Key idea
+
+Speeds up content delivery by using edge locations.
+
+### Use cases
+
+- Fast delivery of images, videos, and websites
+- Streaming applications
+- Reducing latency for global users
+- Securing web applications with caching
+
+---
+
+## 4. Amazon API Gateway
+
+### What it is
+
+Managed service to create, publish, and manage APIs.
+
+### Key idea
+
+Acts as a front door for backend services like Lambda or EC2.
+
+### Use cases
+
+- Serverless APIs with Lambda
+- REST and WebSocket APIs
+- Microservices communication
+- API security and throttling
+
+---
+
+## 5. AWS Direct Connect
+
+### What it is
+
+Dedicated private network connection between on-premises and AWS.
+
+### Key idea
+
+Provides fast, secure, and stable connection to AWS.
+
+### Use cases
+
+- Hybrid cloud setups
+- Large data migrations
+- Low-latency financial applications
+- Consistent network performance
+
+---
+
+## 6. AWS Global Accelerator
+
+### What it is
+
+Service that improves global application performance using AWS global network.
+
+### Key idea
+
+Routes users to the nearest healthy AWS endpoint.
+
+### Use cases
+
+- Global applications needing low latency
+- Gaming applications
+- Multi-region applications
+- Improving application availability
+
+---
+
+## 7. AWS Transit Gateway
+
+### What it is
+
+Central hub to connect multiple VPCs and on-prem networks.
+
+### Key idea
+
+Acts like a network router for AWS environments.
+
+### Use cases
+
+- Connecting multiple VPCs
+- Large enterprise network architecture
+- Hybrid cloud connectivity
+- Simplifying network management
+
+---
+
+## 8. Elastic Load Balancer (ALB / NLB)
+
+### What it is
+
+Distributes incoming traffic across multiple targets like EC2 or containers.
+
+### Types
+
+ALB (Application Load Balancer) → HTTP/HTTPS traffic
+NLB (Network Load Balancer) → High-performance TCP/UDP traffic
+
+### Use cases
+
+- Distributing web traffic
+- Improving application availability
+- Handling high traffic loads
+- Microservices routing
+
