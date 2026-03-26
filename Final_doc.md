@@ -1,4 +1,4 @@
-# AWS Compute Services (Clear Explanation + Use Cases)
+# I. AWS Compute Services (Clear Explanation + Use Cases)
 
 ## 1. EC2 (Elastic Compute Cloud)
 
@@ -189,7 +189,7 @@ You only provide container image and configuration.
 ---
 ---
 
-# AWS Storage Services
+# 2. AWS Storage Services
 
 ## 1. Amazon S3 (Simple Storage Service)
 
