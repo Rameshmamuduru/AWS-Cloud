@@ -677,3 +677,196 @@ NLB (Network Load Balancer) → High-performance TCP/UDP traffic
 - Handling high traffic loads
 - Microservices routing
 
+---
+---
+---
+
+# V. AWS Security, Identity & Compliance
+
+## 1. IAM (Identity and Access Management)
+
+### What it is
+
+Service to control **who can access what** in AWS.
+
+### Key idea
+
+Authentication (who you are) + Authorization (what you can do)
+
+### Use cases
+
+- Creating users and roles
+- Granting permissions to services (EC2, Lambda)
+- Securing AWS resources with least privilege
+- Managing access policies
+
+---
+
+## 2. Amazon Cognito
+
+### What it is
+
+Service for **user authentication and authorization for applications**.
+
+### Key idea
+
+Manages login/signup for your apps.
+
+### Use cases
+
+- User sign-up and sign-in (web/mobile apps)
+- Social login (Google, Facebook)
+- User authentication for APIs
+- Managing user sessions
+
+---
+
+## 3. AWS KMS (Key Management Service)
+
+### What it is
+
+Service to create and manage encryption keys.
+
+### Key idea
+
+Central place to manage encryption securely.
+
+### Use cases
+
+- Encrypting S3, EBS, RDS data
+- Managing encryption keys
+- Secure data protection
+- Compliance requirements
+
+---
+
+## 4. AWS Secrets Manager
+
+### What it is
+
+Service to securely store and manage sensitive information.
+
+### Key idea
+
+Stores secrets like passwords and API keys safely.
+
+### Use cases
+
+- Database credentials storage
+- API keys management
+- Automatic secret rotation
+- Secure application configuration
+
+---
+
+## 5. AWS WAF (Web Application Firewall)
+
+### What it is
+
+Protects web applications from common web attacks.
+
+### Key idea
+
+Filters HTTP/HTTPS traffic.
+
+### Use cases
+
+- Blocking SQL injection attacks
+- Preventing cross-site scripting (XSS)
+- Protecting APIs and web apps
+- Controlling incoming traffic rules
+
+---
+
+## 6. AWS Shield
+
+### What it is
+
+Protection against DDoS (Distributed Denial of Service) attacks.
+
+### Key idea
+
+Defends applications from large-scale traffic attacks.
+
+### Use cases
+
+- Protecting websites from DDoS
+- Securing applications behind CloudFront or ALB
+- Maintaining application availability
+
+---
+
+## 7. Amazon GuardDuty
+
+### What it is
+
+Threat detection service using logs and machine learning.
+
+### Key idea
+
+Detects suspicious activity in AWS accounts.
+
+### Use cases
+
+- Detecting unauthorized access
+- Monitoring unusual API calls
+- Identifying compromised instances
+- Security monitoring
+
+---
+
+## 8. Amazon Inspector
+
+### What it is
+
+Security assessment service for vulnerabilities.
+
+### Key idea
+
+Finds security issues in EC2 and container images.
+
+### Use cases
+
+- Vulnerability scanning
+- Security compliance checks
+- Identifying software weaknesses
+- Improving application security
+
+---
+
+## 9. Amazon Macie
+
+### What it is
+
+Data security service that discovers and protects sensitive data.
+
+### Key idea
+
+Finds sensitive data like PII in S3.
+
+### Use cases
+
+- Detecting personal data (PII)
+- Protecting sensitive information
+- Compliance and auditing
+- Monitoring S3 data security
+
+---
+
+## 10. AWS Security Hub
+
+### What it is
+
+Central place to view and manage security alerts.
+
+### Key idea
+
+Aggregates security findings from multiple AWS services.
+
+### Use cases
+
+- Centralized security monitoring
+- Compliance checks
+- Security posture management
+- Viewing alerts from GuardDuty, Inspector, etc.
+
