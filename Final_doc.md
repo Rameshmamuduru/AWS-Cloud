@@ -18,10 +18,10 @@ Operating system, software, updates, scaling, everything.
 
 ### Use cases
 
-Running web servers like Nginx or Apache
-Hosting backend applications
-Running databases
-Legacy applications that need full OS control
+- Running web servers like Nginx or Apache
+- Hosting backend applications
+- Running databases
+- Legacy applications that need full OS control
 
 ---
 
@@ -33,8 +33,8 @@ Automatically increases or decreases number of EC2 servers based on traffic.
 
 ### What it does
 
-Adds servers when traffic increases
-Removes servers when traffic decreases
+- Adds servers when traffic increases
+- Removes servers when traffic decreases
 
 ### Use cases
 
@@ -54,10 +54,10 @@ You do not manage servers at all.
 
 ### Use cases
 
-File upload processing in S3
-API backend (serverless APIs)
-Automation scripts
-Event-driven systems like notifications
+- File upload processing in S3
+- API backend (serverless APIs)
+- Automation scripts
+- Event-driven systems like notifications
 
 ---
 
@@ -73,9 +73,9 @@ EC2, load balancer, scaling, deployment
 
 ### Use cases
 
-Simple web applications
-Startups deploying apps quickly
-Developers who don’t want to manage infrastructure
+- Simple web applications
+- Startups deploying apps quickly
+- Developers who don’t want to manage infrastructure
 
 ---
 
@@ -89,9 +89,9 @@ It is a simplified version of EC2.
 
 ### Use cases
 
-Small websites
-Blogs (WordPress hosting)
-Learning and basic applications
+- Small websites
+- Blogs (WordPress hosting)
+- Learning and basic applications
 
 ---
 
@@ -105,10 +105,10 @@ It handles job scheduling and compute provisioning.
 
 ### Use cases
 
-Video rendering
-Data processing pipelines
-Scientific calculations
-Large file processing jobs
+- Video rendering
+- Data processing pipelines
+- Scientific calculations
+- Large file processing jobs
 
 ---
 
@@ -122,10 +122,10 @@ AWS handles build, deployment, scaling, and networking.
 
 ### Use cases
 
-REST APIs
-Web applications
-Microservices with simple architecture
-Quick deployment from GitHub
+- REST APIs
+- Web applications
+- Microservices with simple architecture
+- Quick deployment from GitHub
 
 ---
 
@@ -139,9 +139,9 @@ It brings AWS services on-premise.
 
 ### Use cases
 
-Companies needing hybrid cloud
-Strict data residency rules
-Low latency applications near internal systems
+- Companies needing hybrid cloud
+- Strict data residency rules
+- Low latency applications near internal systems
 
 ---
 
@@ -153,9 +153,9 @@ Small AWS data centers placed close to major cities for low latency.
 
 ### Use cases
 
-Gaming applications
-Video editing and rendering
-Real-time applications needing fast response
+- Gaming applications
+- Video editing and rendering
+- Real-time applications needing fast response
 
 ---
 
@@ -169,10 +169,10 @@ It brings compute closer to mobile users.
 
 ### Use cases
 
-AR and VR applications
-Autonomous vehicles
-5G mobile applications
-Real-time streaming apps
+- AR and VR applications
+- Autonomous vehicles
+- 5G mobile applications
+- Real-time streaming apps
 
 ---
 
@@ -186,8 +186,8 @@ You only provide container image and configuration.
 
 ### Use cases
 
-Microservices architecture
-Containerized backend services
-Applications running in ECS or EKS
-Systems where you want no server management
+- Microservices architecture
+- Containerized backend services
+- Applications running in ECS or EKS
+- Systems where you want no server management
 
