@@ -1,4 +1,4 @@
-As a DevOps Engineer, you are expected to manage the following resources through Terraform:
+# As a DevOps Engineer, you are expected to manage the following resources through Terraform:
 
 | Domain              | Resources Managed                                                               |
 | ------------------- | ------------------------------------------------------------------------------- |
