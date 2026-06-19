@@ -1,5 +1,3 @@
-In a real organization, when people say **"Terraform/IaC ownership"**, they usually mean managing almost all cloud infrastructure through code, not just creating EC2 instances.
-
 As a DevOps Engineer, you are expected to manage the following resources through Terraform:
 
 | Domain              | Resources Managed                                                               |
